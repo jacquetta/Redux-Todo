@@ -17,10 +17,8 @@ const AddTodo = ({ submitTodo }) => {
                 input = element;
             }}
             />
-
-        <button type="submit" className="todo-submit">
-            Add Todo
-        </button>
+            
+            <button type='submit' className='btn-floating btn-large waves-effect waves-light todo-submit'>Add</button>
       </form>
     </div>
     )

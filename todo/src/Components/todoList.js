@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../index.css';
 
 const TodoList = ({ todos }) => {
     const todoItems =  todos.map(todo => (
@@ -9,9 +10,9 @@ const TodoList = ({ todos }) => {
     ));
 
     return (
-        <ul>
+        <ol>
             {todoItems}
-        </ul>
+        </ol>
     );
 };
 
