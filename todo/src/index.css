@@ -29,3 +29,11 @@ li{
     font-family: 'Poppins', 'san-serif';
     font-size: 2.5rem;
 }
+
+.toggle-line {
+    text-decoration: line-through;
+}
+
+.toggle-none {
+    text-decoration: none;
+}

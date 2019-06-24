@@ -11,9 +11,9 @@ import './index.css';
 export const App = ({ submitTodo, todos }) => (
          <div>
            <h1 className="z-depth-2">
-             <i class="material-icons">filter_vintage</i>
+             <i className="material-icons">filter_vintage</i>
              Todo List
-             <i class="material-icons">filter_vintage</i>
+             <i className="material-icons">filter_vintage</i>
            </h1>
            <AddTodo submitTodo={submitTodo} />
            <TodoList todos={todos} />

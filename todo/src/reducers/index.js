@@ -15,10 +15,17 @@ export const reducer = (state = initialState, action) => {
                 ...state.todos,
                 {
                     id: action.id,
-                    text: action.text,
+                    value: action.value,
+                    completed: false
                 },
             ],
         };
+
+        case types.TOGGLE_TODO: 
+        return state.map(todo => (todo.id === action.id)
+            ? {...todo, completed: !todo.completed}
+            : todo
+        )
 
         default:
         return state;
