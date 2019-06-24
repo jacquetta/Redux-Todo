@@ -8,11 +8,11 @@ const nextId = () => {
 }
 
 const actions = {
-    submitTodo(text){
+    submitTodo(value){
         return {
             type: types.SUBMIT_TODO,
             id: nextId(),
-            text,
+            value,
         };
     },
 };

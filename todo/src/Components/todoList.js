@@ -2,10 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../index.css';
 
-const TodoList = ({ todos }) => {
+
+const TodoList = ({ todos, completed, toggletodo }) => {
+    let className = 'toggle';
+    if(todos.completed === true){
+        className += 'toggle-line';
+    } else {
+        className += 'toggle-none';
+    }
     const todoItems =  todos.map(todo => (
-        <li key={todo.id}>
-            <span className='todo-text'>{todo.text}</span>
+        <li key={todo.id} toggletodo={className}>
+            <span className='todo-text'>{todo.value}</span>
         </li>
     ));
 
@@ -14,13 +21,14 @@ const TodoList = ({ todos }) => {
             {todoItems}
         </ol>
     );
-};
+}
 
 TodoList.propTypes ={
     todos: PropTypes.arrayOf(PropTypes.shape(
         {
             id: PropTypes.number.isRequired,
-            text: PropTypes.string.isRequired,
+            value: PropTypes.string.isRequired,
+            completed: PropTypes.bool.isRequired
         },
     )).isRequired,
 };
